@@ -1,0 +1,33 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Community posts - using "communityPosts" collection name
+    match /communityPosts/{postId} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null 
+        && request.auth.uid != null
+        && request.resource.data.userId == request.auth.uid
+        && request.resource.data.content is string
+        && request.resource.data.content.size() <= 500
+        && request.resource.data.reported == false
+        && request.resource.data.moderated == false;
+      allow update: if false; // No updates allowed for now
+      allow delete: if request.auth != null && resource.data.userId == request.auth.uid;
+    }
+    
+    // Live chat messages
+    match /live-chat-messages/{messageId} {
+      allow read, write: if request.auth != null;
+    }
+    
+    // Chat messages
+    match /chat-messages/{messageId} {
+      allow read, write: if request.auth != null;
+    }
+    
+    // User profiles
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+  }
+}

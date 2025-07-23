@@ -1,0 +1,23 @@
+rules_version = "2"
+\
+service firebase.storage
+{
+  \
+  match /b/
+  bucket
+  ;/ o{
+  // Community Space media files\
+  match / community - space - media / { userId } / { fileName }
+  \
+      allow read:
+  if request.auth != null;
+  \
+      allow write:
+  if request.auth != null && request.auth.uid == userId && (
+        (resource.contentType.matches('image/.*') && resource.size < 5 * 1024 * 1024) ||
+        (resource.contentType.matches('video/.*') && resource.size < 20 * 1024 * 1024)
+  \
+      )
+}
+\
+}
