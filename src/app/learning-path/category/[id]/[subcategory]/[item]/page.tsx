@@ -141,7 +141,7 @@ export default function LessonPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-teal-50 to-white">
+    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-teal-100 to-white">
       <HeaderNavigation user={user} />
       <main className="max-w-6xl mx-auto p-4 space-y-8">
         {/* Welcome Section */}

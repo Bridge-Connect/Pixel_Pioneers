@@ -14,37 +14,38 @@ export const subcategoryData = {
   alphabets: {
     title: "Alphabets",
     items: [
-      { id: "A", label: "A" },
-      { id: "B", label: "B" },
-      { id: "C", label: "C" },
-      { id: "D", label: "D" },
-      { id: "E", label: "E" },
-      { id: "F", label: "F" },
-      { id: "G", label: "G" },
-      { id: "H", label: "H" },
-      { id: "I", label: "I" },
-      { id: "J", label: "J" },
-      { id: "K", label: "K" },
-      { id: "L", label: "L" },
-      { id: "M", label: "M" },
-      { id: "N", label: "N" },
-      { id: "O", label: "O" },
-      { id: "P", label: "P" },
-      { id: "Q", label: "Q" },
-      { id: "R", label: "R" },
-      { id: "S", label: "S" },
-      { id: "T", label: "T" },
-      { id: "U", label: "U" },
-      { id: "V", label: "V" },
-      { id: "W", label: "W" },
-      { id: "X", label: "X" },
-      { id: "Y", label: "Y" },
-      { id: "Z", label: "Z" },
+      { id: "a", label: "A" },
+      { id: "b", label: "B" },
+      { id: "c", label: "C" },
+      { id: "d", label: "D" },
+      { id: "e", label: "E" },
+      { id: "f", label: "F" },
+      { id: "g", label: "G" },
+      { id: "h", label: "H" },
+      { id: "i", label: "I" },
+      { id: "j", label: "J" },
+      { id: "k", label: "K" },
+      { id: "l", label: "L" },
+      { id: "m", label: "M" },
+      { id: "n", label: "N" },
+      { id: "o", label: "O" },
+      { id: "p", label: "P" },
+      { id: "q", label: "Q" },
+      { id: "r", label: "R" },
+      { id: "s", label: "S" },
+      { id: "t", label: "T" },
+      { id: "u", label: "U" },
+      { id: "v", label: "V" },
+      { id: "w", label: "W" },
+      { id: "x", label: "X" },
+      { id: "y", label: "Y" },
+      { id: "z", label: "Z" },
     ],
   },
   numbers: {
     title: "Numbers",
     items: [
+      { id: "0", label: "0" },
       { id: "1", label: "1" },
       { id: "2", label: "2" },
       { id: "3", label: "3" },
@@ -73,7 +74,6 @@ export const subcategoryData = {
     title: "Greetings",
     items: [
       { id: "hello", label: "Hello" },
-      { id: "goodbye", label: "Goodbye" },
       { id: "thank-you", label: "Thank You" },
       { id: "please", label: "Please" },
       { id: "sorry", label: "Sorry" },
@@ -95,32 +95,32 @@ export const subcategoryData = {
   words: {
     title: "Words",
     items: [
-      { id: "A-apple", label: "A-Apple" },
-      { id: "B-banana", label: "B-Banana" },
-      { id: "C-cat", label: "C-Cat" },
-      { id: "D-dog", label: "D-Dog" },
-      { id: "E-elephant", label: "E-Elephant" },
-      { id: "F-frog", label: "F-Frog" },
-      { id: "G-giraffe", label: "G-Giraffe" },
-      { id: "H-horse", label: "H-Horse" },
-      { id: "I-ice-cream", label: "I-Ice Cream" },
-      { id: "J-jewelery", label: "J-Jewelery" },
-      { id: "K-kite", label: "K-Kite" },
-      { id: "L-lion", label: "L-Lion" },
-      { id: "M-mango", label: "M-Mango" },
-      { id: "N-nurses", label: "N-Nurses" },
-      { id: "O-orange", label: "O-Orange" },
-      { id: "P-pizza", label: "P-Pizza" },
-      { id: "Q-queen", label: "Q-Queen" },
-      { id: "R-rat", label: "R-Rat" },
-      { id: "S-snake", label: "S-Snake" },
-      { id: "T-time", label: "T-Time" },
-      { id: "U-umbrella", label: "U-Umbrella" },
-      { id: "V-van", label: "V-Van" },
-      { id: "W-watermelon", label: "W-Watermelon" },
-      { id: "X-xylophone", label: "X-Xylophone" },
-      { id: "Y-yoga", label: "Y-Yoga" },
-      { id: "Z-zebra", label: "Z-Zebra" },
+      { id: "apple", label: "A-Apple" },
+      { id: "banana", label: "B-Banana" },
+      { id: "cat", label: "C-Cat" },
+      { id: "dog", label: "D-Dog" },
+      { id: "elephant", label: "E-Elephant" },
+      { id: "frog", label: "F-Frog" },
+      { id: "giraffe", label: "G-Giraffe" },
+      { id: "horse", label: "H-Horse" },
+      { id: "ice-cream", label: "I-Ice Cream" },
+      { id: "jewelery", label: "J-Jewelery" },
+      { id: "kite", label: "K-Kite" },
+      { id: "lion", label: "L-Lion" },
+      { id: "mango", label: "M-Mango" },
+      { id: "nurses", label: "N-Nurses" },
+      { id: "orange", label: "O-Orange" },
+      { id: "pizza", label: "P-Pizza" },
+      { id: "queen", label: "Q-Queen" },
+      { id: "rat", label: "R-Rat" },
+      { id: "snake", label: "S-Snake" },
+      { id: "time", label: "T-Time" },
+      { id: "umbrella", label: "U-Umbrella" },
+      { id: "van", label: "V-Van" },
+      { id: "watermelon", label: "W-Watermelon" },
+      { id: "xylophone", label: "X-Xylophone" },
+      { id: "yoga", label: "Y-Yoga" },
+      { id: "zebra", label: "Z-Zebra" },
     ],
   },
   emotions: {
@@ -164,7 +164,7 @@ export const subcategoryData = {
     title: "School",
     items: [
       { id: "book", label: "Book" },
-      { id: "blackboard", label: "Blackboard" },
+      { id: "blackboard_duster", label: "Blackboard" },
       { id: "class", label: "Class" },
       { id: "exam", label: "Exam" },
       { id: "homework", label: "Homework" },
@@ -175,14 +175,13 @@ export const subcategoryData = {
   home:{
     title: "Home",
     items: [
-      { id: "bed", label: "Bed" },
       { id: "chair", label: "Chair" },
-      { id: "table", label: "Table" },
       { id: "fan", label: "Fan" },
       { id: "water", label: "Water" },
       { id: "food", label: "Food" },
       { id: "clothes", label: "Clothes" },
       { id: "bathroom", label: "Bathroom" },
+      { id: "bedroom", label: "Bedroom" },
       { id: "soap", label: "Soap" },
       { id: "door", label: "Door" },
     ],
@@ -210,10 +209,10 @@ export const subcategoryData = {
   "maths-basics": {
     title: "Maths Basics",
     items: [
-      { id: "+", label: "+" },
-      { id: "-", label: "-" },
-      { id: "x", label: "x" },
-      { id: "÷", label: "÷" },
+      { id: "addition", label: "Addition(+)" },
+      { id: "subtraction", label: "Subtraction(-)" },
+      { id: "multiplication", label: "Multiplication(x)" },
+      { id: "division", label: "Division(÷)" },
       ],
   },
   "places-around-us": {
@@ -331,7 +330,7 @@ export default function SubcategoryPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-teal-50 to-white">
+    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-teal-100 to-white">
       <HeaderNavigation user={user} />
       <main className="max-w-6xl mx-auto p-4">
         {/* Welcome Section */}
@@ -377,16 +376,28 @@ export default function SubcategoryPage() {
             ></div>
           </div>
           <span className="text-sm text-gray-700">{completedItems} of {totalItems} completed ({Math.round(progressPercentage)}%)</span>
-          {/* Next Section Button */}
-          {nextSectionHref && nextSectionLabel && (
-            <Link href={nextSectionHref}>
-              <button
-                className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-xl font-semibold text-lg shadow-lg hover:bg-blue-700 transition-all duration-200 flex items-center gap-2 animate-fade-in"
-              >
-                {nextSectionLabel} <ArrowLeft className="w-5 h-5 rotate-180" />
+          
+          {/* Navigation Buttons */}
+          <div className="mt-6 w-full flex justify-between items-center">
+            {/* Back Button - Always on the left */}
+            <Link href={`/learning-path/category/${categoryId}`}>
+              <button className="px-6 py-3 bg-blue-600 text-white rounded-xl font-semibold text-lg shadow-lg hover:bg-blue-700 transition-all duration-200 flex items-center gap-2">
+                <ArrowLeft className="w-4 h-4" />
+                Back to {category?.title || 'Category'}
               </button>
             </Link>
-          )}
+            
+            {/* Next Section Button - Only on the right when progress is 100% */}
+            {nextSectionHref && nextSectionLabel && (
+              <Link href={nextSectionHref}>
+                <button
+                  className="px-6 py-3 bg-blue-600 text-white rounded-xl font-semibold text-lg shadow-lg hover:bg-blue-700 transition-all duration-200 flex items-center gap-2 animate-fade-in"
+                >
+                  {nextSectionLabel} <ArrowLeft className="w-5 h-5 rotate-180" />
+                </button>
+              </Link>
+            )}
+          </div>
         </div>
 
         {/* Instructions */}

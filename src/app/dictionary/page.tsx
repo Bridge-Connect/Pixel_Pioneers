@@ -65,7 +65,7 @@ export default function DictionaryPage() {
   return (
     <AuthGuardComponent>
       <HeaderNavigation user={user} />
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-teal-50 to-white flex flex-col items-center justify-start py-10 px-2">
+      <div className="min-h-screen bg-gradient-to-br  from-blue-100 via-teal-100 to-white flex flex-col items-center justify-start py-10 px-2">
         <Card className="max-w-4xl w-full shadow-2xl bg-white/90 backdrop-blur-md border-2 border-blue-100">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-2xl md:text-3xl">

@@ -54,13 +54,12 @@ export default function MainDashboard() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-gray-50 transition-colors duration-300">
+    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-teal-100 to-white transition-colors duration-300">
       <HeaderNavigation user={user} />
 
       {/* Main Content */}
-      <main className="max-w-4xl mx-auto px-4 py-8">
-        {/* Welcome Section */}
-        <div className="text-center mb-12">
+      <br></br>
+      <div className="text-center mb-12">
           <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
             <GraduationCap className="w-10 h-10 text-white" />
           </div>
@@ -69,18 +68,18 @@ export default function MainDashboard() {
         </div>
 
         {/* Category Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-10xl mx-auto px-8">
           {mainCategories.map((category) => {
             return (
               <Link key={category.id} href={`/learning-path/category/${category.id}`}>
-                <Card className="group cursor-pointer border-2 border-gray-200 hover:border-gray-300 transition-all duration-300 hover:shadow-lg">
-                  <CardContent className="p-8 text-center">
+                <Card className="group cursor-pointer border-2 border-gray-200 hover:border-gray-300 transition-all duration-300 hover:shadow-lg min-h-[350px]">
+                  <CardContent className="p-8 text-center flex flex-col justify-center h-full">
                     <div
-                      className={`w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4 text-5xl ${category.color} group-hover:scale-110 transition-transform`}
+                      className={`w-48 h-48 rounded-full flex items-center justify-center mx-auto mb-6 text-9xl ${category.color} group-hover:scale-110 transition-transform`}
                     >
                       <span>{category.emoji}</span>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 group-hover:text-gray-700 transition-colors">
+                    <h3 className="text-3xl font-bold text-gray-900 group-hover:text-gray-700 transition-colors">
                       {category.title}
                     </h3>
                   </CardContent>
@@ -119,7 +118,6 @@ export default function MainDashboard() {
             })}
           </div>
         </div> */}
-      </main>
     </div>
   )
 }
