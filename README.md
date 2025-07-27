@@ -1,4 +1,4 @@
-# 🌐 EduSign Platform – *Bridge Connect*  
+# 🌐 EduSign Platform 
 > **Empowering the Deaf and Mute Community with Accessible Learning and Communication**
 
 ---
@@ -15,7 +15,9 @@ The absence of real-time, accessible platforms often leads to:
 
 ---
 
-## ✅ Solution: *Bridge Connect – EduSign Platform*
+## ✅ Solution: *EduSign Platform*
+<img width="972" height="931" alt="image" src="https://github.com/user-attachments/assets/603030d5-6a72-427e-a65a-44274316ca88" />
+
 
 A unified digital platform tailored to **empower the deaf and mute community** by removing key barriers to learning and communication.
 
@@ -39,15 +41,47 @@ A unified digital platform tailored to **empower the deaf and mute community** b
 
 ---
 
-## 🔁 Workflow
+## 🔄 Workflow & User Journey
+<img width="940" height="534" alt="image" src="https://github.com/user-attachments/assets/743a726f-caec-42a8-953c-68e5af0c3cec" />
 
-1. User accesses learning or communication module  
-2. Sign language resources and tools are rendered using visual aids and video  
-3. Real-time features bridge communication gaps using Web APIs and ML models  
-4. Firebase handles auth, database, and storage  
-5. Cloudinary manages fast video delivery  
+
+### User Registration Flow
+
+1. User visits landing page
+2. Clicks "Login" button
+3. Chooses "Sign Up" option
+4. Enters email and password
+5. Firebase creates user account
+6. User profile created in Firestore
+7. Redirected to dashboard
+
+### Communication Workflow
+
+For Hearing Users:
+1. Click microphone button
+2. Speak into microphone
+3. Voice converted to text
+4. Text appears in chat
+5. Deaf user reads message
+
+For Deaf/Mute Users:
+1. Type message in text input
+2. Click "Send & Speak"
+3. Text converted to speech
+4. Hearing user hears message
+5. Message saved to database
+
+### Learning Workflow
+
+1. User selects learning category
+2. Chooses specific lesson
+3. Watches instructional video
+4. Completes interactive exercises
+5. Progress marked as complete
+6. Analytics updated in database
 
 ---
+
 
 ## 🛠 Tech Stack
 
