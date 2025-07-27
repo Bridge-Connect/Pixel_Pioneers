@@ -76,7 +76,7 @@ A unified digital platform tailored to **empower the deaf and mute community** b
 - **Video Dictionary** – ISLRTC Google Drive Clone
 
 ### 📦 **Package Manager**
-- **pnpm** – Fast dependency management
+- **npm** – Fast dependency management
 
 ---
 ## 🗂 Folder Structure
