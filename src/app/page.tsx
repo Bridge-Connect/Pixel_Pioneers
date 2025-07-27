@@ -9,7 +9,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { MessageCircle, BookOpen, Users, Search, ArrowRight, LogIn, Heart, Sparkles } from "lucide-react"
+import { MessageCircle, BookOpen, Users, Search, ArrowRight, LogIn, Heart, Sparkles, Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
 
 export default function HomePage() {
   const router = useRouter()
@@ -40,12 +40,19 @@ export default function HomePage() {
                 <h1 className="text-xl font-bold text-gray-800">EduSign</h1>
               </div>
             </Link>
-            <Link href="/login">
-              <Button className="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white px-6 py-2 rounded-xl shadow-lg">
-                <LogIn className="w-4 h-4 mr-2" />
-                Login
-              </Button>
-            </Link>
+            <div className="flex items-center space-x-3">
+              <Link href="/login">
+                <Button className="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white px-6 py-2 rounded-xl shadow-lg">
+                  <LogIn className="w-4 h-4 mr-2" />
+                  Login
+                </Button>
+              </Link>
+              <Link href="/login/signup">
+                <Button className="bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white px-6 py-2 rounded-xl shadow-lg">
+                  Sign Up
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </nav>
@@ -310,16 +317,16 @@ export default function HomePage() {
             {/* Social Icons */}
             <div className="flex items-center space-x-5">
               <a href="#" aria-label="Facebook" className="hover:text-blue-400 transition-colors" title="Facebook">
-                <span className="text-2xl">📘</span>
+                <Facebook className="w-6 h-6" />
               </a>
               <a href="#" aria-label="Twitter" className="hover:text-blue-300 transition-colors" title="Twitter">
-                <span className="text-2xl">🐦</span>
+                <Twitter className="w-6 h-6" />
               </a>
               <a href="#" aria-label="Instagram" className="hover:text-pink-400 transition-colors" title="Instagram">
-                <span className="text-2xl">📷</span>
+                <Instagram className="w-6 h-6" />
               </a>
               <a href="#" aria-label="LinkedIn" className="hover:text-blue-200 transition-colors" title="LinkedIn">
-                <span className="text-2xl">💼</span>
+                <Linkedin className="w-6 h-6" />
               </a>
             </div>
           </div>

@@ -3,15 +3,16 @@
 import type React from "react"
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
-import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth"
-import { auth } from "../../lib/firebase-client"
+import { createUserWithEmailAndPassword, onAuthStateChanged } from "firebase/auth"
+import { doc, setDoc, getDoc } from "firebase/firestore"
+import { auth, db } from "../../../lib/firebase-client"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card } from "@/components/ui/card"
-import { Eye, EyeOff, Mail, Lock, LogIn, AlertCircle, ArrowLeft } from "lucide-react"
+import { Eye, EyeOff, Mail, Lock, UserPlus, AlertCircle, ArrowLeft } from "lucide-react"
 import Link from "next/link"
 
-export default function LoginPage() {
+export default function SignupPage() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [showPassword, setShowPassword] = useState(false)
@@ -33,6 +34,33 @@ export default function LoginPage() {
     return () => unsubscribe()
   }, [router])
 
+  const createUserProfile = async (userId: string, email: string) => {
+    try {
+      const userRef = doc(db, "users", userId)
+      const userSnap = await getDoc(userRef)
+
+      if (!userSnap.exists()) {
+        await setDoc(userRef, {
+          email,
+          createdAt: new Date(),
+          lastLogin: new Date(),
+          profile: {
+            preferences: {
+              theme: "light",
+              notifications: true,
+            },
+          },
+          stats: {
+            totalSessions: 0,
+            totalMessages: 0,
+          },
+        })
+      }
+    } catch (error) {
+      console.error("Error creating user profile:", error)
+    }
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!auth) {
@@ -40,14 +68,22 @@ export default function LoginPage() {
       return
     }
 
+
+
+    if (password.length < 6) {
+      setError("Password must be at least 6 characters long")
+      return
+    }
+
     setLoading(true)
     setError("")
 
     try {
-      await signInWithEmailAndPassword(auth, email, password)
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password)
+      await createUserProfile(userCredential.user.uid, email)
       router.push("/dashboard-home")
     } catch (err: any) {
-      setError(err.message || "An error occurred during sign in")
+      setError(err.message || "An error occurred during signup")
     } finally {
       setLoading(false)
     }
@@ -71,9 +107,9 @@ export default function LoginPage() {
           <div className="bg-gradient-to-r from-blue-600 to-teal-600 p-4 rounded-2xl w-fit mx-auto mb-4">
             <span className="text-4xl">🤝</span>
           </div>
-          <h1 className="text-3xl font-bold text-gray-800 mb-2">Welcome Back</h1>
-          <p className="text-gray-600">Sign in to your account</p>
-          <p className="text-sm text-gray-500 mt-2">Empowering inclusive communication</p>
+          <h1 className="text-3xl font-bold text-gray-800 mb-2">Join EduSign</h1>
+          <p className="text-gray-600">Create your account</p>
+          <p className="text-sm text-gray-500 mt-2">Start your journey to inclusive communication</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -125,20 +161,20 @@ export default function LoginPage() {
             {loading ? (
               <div className="flex items-center justify-center">
                 <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                Signing In...
+                Creating Account...
               </div>
             ) : (
               <div className="flex items-center justify-center">
-                <LogIn className="w-5 h-5 mr-2" />
-                Sign In
+                <UserPlus className="w-5 h-5 mr-2" />
+                Create Account
               </div>
             )}
           </Button>
         </form>
 
         <div className="mt-6 text-center">
-          <Link href="/login/signup" className="text-blue-600 hover:text-blue-700 font-medium transition-colors">
-            Don't have an account? Sign up
+          <Link href="/login" className="text-blue-600 hover:text-blue-700 font-medium transition-colors">
+            Already have an account? Sign in
           </Link>
         </div>
 
@@ -155,4 +191,4 @@ export default function LoginPage() {
       </Card>
     </div>
   )
-}
+} 

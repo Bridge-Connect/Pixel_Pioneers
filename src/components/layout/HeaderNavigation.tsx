@@ -90,7 +90,7 @@ export default function HeaderNavigation({
                     disabled={item.disabled}
                     title={item.disabled ? "Coming Soon" : item.label}
                   >
-                    <span className="text-lg">{item.emoji}</span>
+                    <span className="text-2xl">{item.emoji}</span>
                     <span className="text-xs font-medium">{item.label}</span>
                     {/* {item.comingSoon && <span className="text-xs text-gray-500">Coming Soon</span>} */}
                   </Button>
@@ -159,7 +159,7 @@ export default function HeaderNavigation({
                   className="w-full justify-start mb-3 bg-transparent"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  <Home className="w-4 h-4 mr-2" />🏠 Home Dashboard
+                  <Home className="text-2xl mr-2" />🏠 Home Dashboard
                 </Button>
               </Link>
 
